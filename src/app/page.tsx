@@ -127,7 +127,7 @@ export default function EarthElements() {
             <div className="bg-gray-900 text-white p-8 rounded flex flex-col justify-between">
               <div>
                 <blockquote className="text-xl mb-4">
-                  "Working with your design team was an absolute pleasure. The attention to detail and creativity exceeded my expectations. Thank you for making my home beautiful!"
+                  Working with your design team was an absolute pleasure. The attention to detail and creativity exceeded my expectations. Thank you for making my home beautiful!
                 </blockquote>
                 <div className="flex items-center">
                   <img src="https://picsum.photos/1920" alt="Sophia Carter" className="w-12 h-12 rounded-full mr-4" />
