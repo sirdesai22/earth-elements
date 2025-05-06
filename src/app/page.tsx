@@ -9,8 +9,8 @@ export default function Home() {
       {/* Header */}
       <header className="container mx-auto px-4 py-6 flex justify-between items-center">
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 bg-black"></div>
-          <span className="text-sm font-medium">Rawabi</span>
+          <div className="w-6 h-6 bg-black rounded-full"></div>
+          <span className="text-sm font-medium">Earth Elements</span>
         </div>
         <nav className="hidden md:flex items-center space-x-8">
           <Link href="#" className="text-sm hover:underline">
@@ -48,11 +48,11 @@ export default function Home() {
       <main>
         {/* Hero Section */}
         <section className="container mx-auto px-4 py-12 md:py-20">
-          <h1 className="text-4xl md:text-6xl font-serif max-w-xl">Rawabi Interiors and solutions</h1>
-          <div className="grid md:grid-cols-2 gap-8 mt-8">
+          <h1 className="text-4xl md:text-6xl font-serif max-w-xl">Earth Elements and solutions</h1>
+          <div className="grid md:grid-cols-1 gap-8 mt-8">
             <div className="relative h-[400px] md:h-[500px] bg-gray-100">
               <Image
-                src="/placeholder.svg?height=500&width=600"
+                src="https://www.amazingarchitecture.com/photos/5/Spaces%20Architects%40ka/INTERSEKT%20TILES%20SHOWROOM/INTERSEKT%20%E2%80%93_TILES_SHOWROOM_Spaces_Architects%40ka_NewDelhi_India_029.jpg"
                 alt="Interior design showcase"
                 fill
                 className="object-cover"
@@ -76,7 +76,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="relative h-[300px] bg-gray-100">
               <Image
-                src="/placeholder.svg?height=300&width=600"
+                src="https://d3joggurz1vobr.cloudfront.net/static/uploads/9b628259-dfa9-4b0e-82ad-599e77943333-1673764069408.jpeg"
                 alt="Living room design"
                 fill
                 className="object-cover"
@@ -86,7 +86,7 @@ export default function Home() {
               </div>
             </div>
             <div className="relative h-[300px] bg-gray-100">
-              <Image src="/placeholder.svg?height=300&width=600" alt="Kitchen design" fill className="object-cover" />
+              <Image src="https://m.media-amazon.com/images/I/91lMkFM+VqL.jpg" alt="Kitchen design" fill className="object-cover" />
               <div className="absolute bottom-4 left-4">
                 <span className="text-xs bg-white px-2 py-1">Kitchen</span>
               </div>
@@ -103,7 +103,7 @@ export default function Home() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="relative h-[200px] bg-gray-700">
                     <Image
-                      src="/placeholder.svg?height=200&width=300"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS10KSNh23nm98LCiayr0i6dpSQ0HK90W2lxQ&s"
                       alt="Commercial design"
                       fill
                       className="object-cover opacity-90"
@@ -111,7 +111,7 @@ export default function Home() {
                   </div>
                   <div className="relative h-[200px] bg-gray-700">
                     <Image
-                      src="/placeholder.svg?height=200&width=300"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDoxvAAFNVJAEFlcIq0wK0T4TK1Qstgccn6w&s"
                       alt="Commercial design"
                       fill
                       className="object-cover opacity-90"
@@ -119,7 +119,7 @@ export default function Home() {
                   </div>
                   <div className="relative h-[200px] bg-gray-700">
                     <Image
-                      src="/placeholder.svg?height=200&width=300"
+                      src="https://www.hrjohnsonindia.com/assets/images/blog/kitchen-tiles-designs.jpg"
                       alt="Commercial design"
                       fill
                       className="object-cover opacity-90"
@@ -127,7 +127,7 @@ export default function Home() {
                   </div>
                   <div className="relative h-[200px] bg-gray-700">
                     <Image
-                      src="/placeholder.svg?height=200&width=300"
+                      src="https://apollotile.com/cdn/shop/files/URBANAWOOD.jpg?v=1726749477"
                       alt="Commercial design"
                       fill
                       className="object-cover opacity-90"
@@ -140,7 +140,7 @@ export default function Home() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="relative h-[120px] bg-gray-700">
                     <Image
-                      src="/placeholder.svg?height=120&width=150"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcxjgfqFWUayNvuEXWTw5jmWvp8Cbviq-dcA&s"
                       alt="Retail design"
                       fill
                       className="object-cover opacity-90"
@@ -151,7 +151,7 @@ export default function Home() {
                   </div>
                   <div className="relative h-[120px] bg-gray-700">
                     <Image
-                      src="/placeholder.svg?height=120&width=150"
+                      src="https://www.johnson-tiles.com/media/filer_public_thumbnails/filer_public/d5/da/d5da2237-3969-4d20-87eb-7c0583776322/everglow_thumb.jpg__1440x0_q85_subsampling-2_upscale.jpg"
                       alt="Salon design"
                       fill
                       className="object-cover opacity-90"
@@ -169,7 +169,7 @@ export default function Home() {
         {/* About Section */}
         <section className="container mx-auto px-4 py-12 md:py-20">
           <h2 className="text-2xl md:text-3xl font-serif mb-6">
-            Breathtaking Interior Design and Fitouts by Rawabi City Building Contracting LLC
+            Breathtaking Interior Design and Fitouts by Earth Elements
           </h2>
           <div className="grid md:grid-cols-3 gap-8 mt-8">
             <div className="flex flex-col items-center">
@@ -185,19 +185,15 @@ export default function Home() {
               <span className="text-sm">Functionality</span>
             </div>
             <div className="flex flex-col items-center">
-              <div className="relative w-24 h-24 mb-4">
-                <Image
-                  src="/placeholder.svg?height=100&width=100"
-                  alt="Design concept"
-                  fill
-                  className="object-cover rounded-full"
-                />
+              <div className="w-16 h-16 border border-gray-300 rounded-full flex items-center justify-center mb-4">
+                <span className="text-sm">03</span>
               </div>
+              <span className="text-sm">Worthy</span>
             </div>
           </div>
           <div className="mt-12">
             <p className="text-sm max-w-2xl mb-6">
-              Welcome to Rawabi Interior Design and Fitout, where luxury and style are defined. Over the past 15 years,
+              Welcome to Earth Elements Design and Fitout, where luxury and style are defined. Over the past 15 years,
               we have established ourselves as a premier interior design company that offers the sophistication and
               individuality.
             </p>
@@ -208,7 +204,7 @@ export default function Home() {
           <div className="mt-12">
             <div className="relative h-[400px] bg-gray-100">
               <Image
-                src="/placeholder.svg?height=400&width=1200"
+                src="https://static.asianpaints.com/content/dam/asianpaintsbeautifulhomes/202211/experiment-with-wooden-tiles-in-your-home-interior-design/title-wooden-tiles-interiors.jpg.transform/bh-tb-image-container/image.webp"
                 alt="Interior design showcase"
                 fill
                 className="object-cover"
@@ -249,7 +245,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-4 mt-6">
               <div className="relative h-[250px] bg-gray-100">
                 <Image
-                  src="/placeholder.svg?height=250&width=600"
+                  src="https://media.designcafe.com/wp-content/uploads/2020/10/22162905/vitrified-tiles-design-ideas-for-your-home.jpg"
                   alt="Apartment interior"
                   fill
                   className="object-cover"
@@ -257,7 +253,7 @@ export default function Home() {
               </div>
               <div className="relative h-[250px] bg-gray-100">
                 <Image
-                  src="/placeholder.svg?height=250&width=600"
+                  src="https://www.beautifulhomes.asianpaints.com/content/dam/asianpaintsbeautifulhomes/202311/hallway-tiles-design/title-hallway-design.jpg"
                   alt="Apartment interior"
                   fill
                   className="object-cover"
@@ -286,7 +282,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-4 mt-6">
               <div className="relative h-[250px] bg-gray-100">
                 <Image
-                  src="/placeholder.svg?height=250&width=600"
+                  src="https://www.architectandinteriorsindia.com/cloud/2021/11/15/Story-2_1.jpeg"
                   alt="Retail interior"
                   fill
                   className="object-cover"
@@ -294,7 +290,7 @@ export default function Home() {
               </div>
               <div className="relative h-[250px] bg-gray-100">
                 <Image
-                  src="/placeholder.svg?height=250&width=600"
+                  src="https://cdn.shopify.com/s/files/1/0761/8649/files/image11_bee19e94-26c5-401e-8213-0187d2b1fa82.JPG?v=1488808833"
                   alt="Retail interior"
                   fill
                   className="object-cover"
@@ -322,7 +318,7 @@ export default function Home() {
         {/* Newsletter Section */}
         <section className="container mx-auto px-4 py-12 md:py-20">
           <div className="relative h-[300px] bg-gray-100">
-            <Image src="/placeholder.svg?height=300&width=1200" alt="Interior design" fill className="object-cover" />
+            <Image src="https://www.surfacesreporter.com/myuploads/TILE-SECTION.jpg" alt="Interior design" fill className="object-cover" />
             <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-20 text-white">
               <h2 className="text-2xl md:text-3xl font-serif mb-6">Newsletter subscribe</h2>
               <Button variant="outline" className="rounded-full px-6 py-2 border-white text-white text-xs">
@@ -339,8 +335,8 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between mb-12">
             <div className="mb-8 md:mb-0">
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-6 h-6 bg-black"></div>
-                <span className="text-sm font-medium">Rawabi Interiors</span>
+                <div className="w-6 h-6 bg-black rounded-full"></div>
+                <span className="text-sm font-medium">Earth Elements</span>
               </div>
               <div className="flex items-center gap-4 mt-4">
                 <Link href="#" className="text-sm">
@@ -407,13 +403,13 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-sm font-medium mb-4">Email</h3>
-                <p className="text-xs">info@rawabiinteriors.com</p>
+                <p className="text-xs">info@earthelements.com</p>
                 <p className="text-xs mt-4">UAE</p>
               </div>
             </div>
           </div>
           <div className="border-t border-gray-200 pt-6 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-xs mb-4 md:mb-0">© 2023 Copyright Rawabi Interiors</p>
+            <p className="text-xs mb-4 md:mb-0">© 2023 Copyright Earth Elements</p>
             <div className="flex gap-4">
               <Link href="#" className="text-xs hover:underline">
                 Terms of service
