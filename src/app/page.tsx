@@ -1,192 +1,427 @@
-"use client"
-import { useState } from 'react'
-import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-react'
+import Image from "next/image"
+import Link from "next/link"
+import { Instagram, Facebook, Twitter } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
-export default function EarthElements() {
-  const [email, setEmail] = useState('')
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle newsletter subscription
-    console.log('Subscribed:', email)
-    setEmail('')
-  }
-
+export default function Home() {
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-[#f5f2ee]">
+      {/* Header */}
       <header className="container mx-auto px-4 py-6 flex justify-between items-center">
-        <div className="text-2xl font-bold">Earth Elements</div>
-        <nav>
-          <ul className="flex space-x-6">
-            <li><a href="#" className="hover:underline">Home</a></li>
-            <li><a href="#" className="hover:underline">Services</a></li>
-            <li><a href="#" className="hover:underline">Categories</a></li>
-            <li><a href="#" className="hover:underline">Contact</a></li>
-          </ul>
+        <div className="flex items-center gap-2">
+          <div className="w-6 h-6 bg-black"></div>
+          <span className="text-sm font-medium">Rawabi</span>
+        </div>
+        <nav className="hidden md:flex items-center space-x-8">
+          <Link href="#" className="text-sm hover:underline">
+            Home
+          </Link>
+          <Link href="#" className="text-sm hover:underline">
+            Services
+          </Link>
+          <Link href="#" className="text-sm hover:underline">
+            Projects
+          </Link>
+          <Link href="#" className="text-sm hover:underline">
+            About
+          </Link>
+          <Link href="#" className="text-sm hover:underline">
+            Blog
+          </Link>
         </nav>
+        <div className="flex items-center gap-4">
+          <Link href="#" className="text-sm">
+            <Instagram className="h-4 w-4" />
+          </Link>
+          <Link href="#" className="text-sm">
+            <Facebook className="h-4 w-4" />
+          </Link>
+          <Link href="#" className="text-sm">
+            <Twitter className="h-4 w-4" />
+          </Link>
+          <Button variant="outline" className="text-xs rounded-full px-4 border-black text-black">
+            Contact us
+          </Button>
+        </div>
       </header>
 
       <main>
-        <section className="container mx-auto px-4 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h1 className="text-5xl font-bold mb-4">Earth Elements</h1>
-              <p className="text-xl mb-6">
-                Step into a world where the art of Interior Design is meticulously crafted to bring together timeless elegance and cutting-edge modern innovation. Allowing you to transform your living spaces into the epitome of luxury and sophistication.
-              </p>
-              <button className="bg-black text-white px-6 py-3 rounded">Start Project</button>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              <img src="https://picsum.photos/1920" alt="Interior design 1" className="w-full h-full object-cover" />
-              <img src="https://picsum.photos/1920" alt="Interior design 2" className="w-full h-full object-cover" />
-            </div>
-          </div>
-          <div className="flex justify-between mt-12 text-center">
-            <div>
-              <div className="text-4xl font-bold">400+</div>
-              <div>Project Complete</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold">600+</div>
-              <div>Satisfied Clients</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold">100+</div>
-              <div>Unique Styles</div>
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-gray-100 py-12">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8">Our Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {['Lighting Design', 'Interior Design', 'Outdoor Design'].map((service) => (
-                <div key={service} className="flex items-start">
-                  <div className="mr-4">
-                    <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">{service}</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="container mx-auto px-4 py-12">
-          <h2 className="text-3xl font-bold mb-8">What We Create</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div key={i} className="relative">
-                <img src={`https://picsum.photos/192${i}`} alt={`Design ${i}`} className="w-full h-64 object-cover rounded" />
-                <div className="absolute bottom-0 left-0 bg-white p-2 rounded-tr">
-                  <h3 className="font-semibold">Interior Design</h3>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="bg-gray-100 py-12">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8">Designing Your Dream in Three Simple Steps</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div>
-                {['Start Project', 'Craft', 'Execute'].map((step, index) => (
-                  <div key={step} className="flex items-start mb-6">
-                    <div className="bg-black text-white rounded-full w-8 h-8 flex items-center justify-center mr-4">
-                      {index + 1}
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2">{step}</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div>
-                <img src="https://picsum.photos/1920" alt="Interior design process" className="w-full h-full object-cover rounded" />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="container mx-auto px-4 py-12">
-          <h2 className="text-3xl font-bold mb-8">What Our Customers Say About Us</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="col-span-2">
-              <img src="https://picsum.photos/1920" alt="Interior design showcase" className="w-full h-64 object-cover rounded" />
-            </div>
-            <div className="bg-gray-900 text-white p-8 rounded flex flex-col justify-between">
-              <div>
-                <blockquote className="text-xl mb-4">
-                  Working with your design team was an absolute pleasure. The attention to detail and creativity exceeded my expectations. Thank you for making my home beautiful!
-                </blockquote>
-                <div className="flex items-center">
-                  <img src="https://picsum.photos/1920" alt="Sophia Carter" className="w-12 h-12 rounded-full mr-4" />
-                  <div>
-                    <div className="font-semibold">Sophia Carter</div>
-                    <div className="text-sm">Happy Client</div>
-                  </div>
-                </div>
-              </div>
-              <div className="flex justify-end mt-4">
-                <button className="mr-2"><ChevronLeftIcon className="w-6 h-6" /></button>
-                <button><ChevronRightIcon className="w-6 h-6" /></button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-gray-100 py-12">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
-            <p className="mb-8">Be the first to discover trends, inspirations, and special offers as we bring the world of design directly to your inbox</p>
-            <form onSubmit={handleSubmit} className="flex max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="flex-grow px-4 py-2 rounded-l border-t border-b border-l"
-                required
+        {/* Hero Section */}
+        <section className="container mx-auto px-4 py-12 md:py-20">
+          <h1 className="text-4xl md:text-6xl font-serif max-w-xl">Rawabi Interiors and solutions</h1>
+          <div className="grid md:grid-cols-2 gap-8 mt-8">
+            <div className="relative h-[400px] md:h-[500px] bg-gray-100">
+              <Image
+                src="/placeholder.svg?height=500&width=600"
+                alt="Interior design showcase"
+                fill
+                className="object-cover"
               />
-              <button type="submit" className="bg-black text-white px-6 py-2 rounded-r">
+            </div>
+            <div className="flex flex-col justify-end">
+              <p className="text-sm mb-4 max-w-md">Designs inspired to bring your spaces to life</p>
+              <div className="flex items-center justify-between">
+                <Button variant="outline" className="rounded-full px-6 py-2 border-black text-black text-xs">
+                  View Our Portfolio
+                </Button>
+                <span className="text-sm">01/05</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section className="container mx-auto px-4 py-12">
+          <h2 className="text-3xl font-serif mb-8">Residential Services</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="relative h-[300px] bg-gray-100">
+              <Image
+                src="/placeholder.svg?height=300&width=600"
+                alt="Living room design"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute bottom-4 left-4">
+                <span className="text-xs bg-white px-2 py-1">Living Room</span>
+              </div>
+            </div>
+            <div className="relative h-[300px] bg-gray-100">
+              <Image src="/placeholder.svg?height=300&width=600" alt="Kitchen design" fill className="object-cover" />
+              <div className="absolute bottom-4 left-4">
+                <span className="text-xs bg-white px-2 py-1">Kitchen</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Tagline Section */}
+        <section className="bg-black text-white py-12 md:py-20">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl md:text-4xl font-serif mb-8">Your home, your reflect on</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="md:col-span-2">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="relative h-[200px] bg-gray-700">
+                    <Image
+                      src="/placeholder.svg?height=200&width=300"
+                      alt="Commercial design"
+                      fill
+                      className="object-cover opacity-90"
+                    />
+                  </div>
+                  <div className="relative h-[200px] bg-gray-700">
+                    <Image
+                      src="/placeholder.svg?height=200&width=300"
+                      alt="Commercial design"
+                      fill
+                      className="object-cover opacity-90"
+                    />
+                  </div>
+                  <div className="relative h-[200px] bg-gray-700">
+                    <Image
+                      src="/placeholder.svg?height=200&width=300"
+                      alt="Commercial design"
+                      fill
+                      className="object-cover opacity-90"
+                    />
+                  </div>
+                  <div className="relative h-[200px] bg-gray-700">
+                    <Image
+                      src="/placeholder.svg?height=200&width=300"
+                      alt="Commercial design"
+                      fill
+                      className="object-cover opacity-90"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-serif mb-4">Commercial Service</h3>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="relative h-[120px] bg-gray-700">
+                    <Image
+                      src="/placeholder.svg?height=120&width=150"
+                      alt="Retail design"
+                      fill
+                      className="object-cover opacity-90"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 p-2 bg-black bg-opacity-50">
+                      <span className="text-xs">Retail Shop Design</span>
+                    </div>
+                  </div>
+                  <div className="relative h-[120px] bg-gray-700">
+                    <Image
+                      src="/placeholder.svg?height=120&width=150"
+                      alt="Salon design"
+                      fill
+                      className="object-cover opacity-90"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 p-2 bg-black bg-opacity-50">
+                      <span className="text-xs">Salon Design</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section className="container mx-auto px-4 py-12 md:py-20">
+          <h2 className="text-2xl md:text-3xl font-serif mb-6">
+            Breathtaking Interior Design and Fitouts by Rawabi City Building Contracting LLC
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8 mt-8">
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-16 border border-gray-300 rounded-full flex items-center justify-center mb-4">
+                <span className="text-sm">01</span>
+              </div>
+              <span className="text-sm">Inspiration</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-16 border border-gray-300 rounded-full flex items-center justify-center mb-4">
+                <span className="text-sm">02</span>
+              </div>
+              <span className="text-sm">Functionality</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="relative w-24 h-24 mb-4">
+                <Image
+                  src="/placeholder.svg?height=100&width=100"
+                  alt="Design concept"
+                  fill
+                  className="object-cover rounded-full"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="mt-12">
+            <p className="text-sm max-w-2xl mb-6">
+              Welcome to Rawabi Interior Design and Fitout, where luxury and style are defined. Over the past 15 years,
+              we have established ourselves as a premier interior design company that offers the sophistication and
+              individuality.
+            </p>
+            <Button variant="link" className="text-xs text-black p-0">
+              Learn more
+            </Button>
+          </div>
+          <div className="mt-12">
+            <div className="relative h-[400px] bg-gray-100">
+              <Image
+                src="/placeholder.svg?height=400&width=1200"
+                alt="Interior design showcase"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Projects Section */}
+        <section className="container mx-auto px-4 py-12 md:py-20">
+          <h2 className="text-2xl md:text-3xl font-serif mb-6">Explore our selection of completed interior projects</h2>
+          <div className="grid md:grid-cols-2 gap-8 mt-8">
+            <div>
+              <p className="text-sm max-w-md mb-6">
+                Discover a curated showcase of our finished interior projects, demonstrating our expertise and
+                creativity in transforming spaces.
+              </p>
+            </div>
+          </div>
+
+          {/* Project 1 */}
+          <div className="mt-12 border-t border-gray-200 pt-6">
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-2 h-2 bg-black rounded-full"></div>
+              <span className="text-xs">Residential Service</span>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-serif mb-4">Apartment Interior Design and Fit out</h3>
+              </div>
+              <div className="flex justify-between items-center">
+                <Button variant="link" className="text-xs text-black p-0">
+                  View Project
+                </Button>
+                <span className="text-xs">01/06</span>
+              </div>
+            </div>
+            <div className="grid md:grid-cols-2 gap-4 mt-6">
+              <div className="relative h-[250px] bg-gray-100">
+                <Image
+                  src="/placeholder.svg?height=250&width=600"
+                  alt="Apartment interior"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative h-[250px] bg-gray-100">
+                <Image
+                  src="/placeholder.svg?height=250&width=600"
+                  alt="Apartment interior"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Project 2 */}
+          <div className="mt-12 border-t border-gray-200 pt-6">
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-2 h-2 bg-black rounded-full"></div>
+              <span className="text-xs">Commercial Service</span>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-serif mb-4">Retail Interior Design & fit out</h3>
+              </div>
+              <div className="flex justify-between items-center">
+                <Button variant="link" className="text-xs text-black p-0">
+                  View Project
+                </Button>
+                <span className="text-xs">02/06</span>
+              </div>
+            </div>
+            <div className="grid md:grid-cols-2 gap-4 mt-6">
+              <div className="relative h-[250px] bg-gray-100">
+                <Image
+                  src="/placeholder.svg?height=250&width=600"
+                  alt="Retail interior"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative h-[250px] bg-gray-100">
+                <Image
+                  src="/placeholder.svg?height=250&width=600"
+                  alt="Retail interior"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Button variant="link" className="text-xs text-black inline-flex items-center gap-2">
+              View more projects
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5 12H19M19 12L12 5M19 12L12 19"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </Button>
+          </div>
+        </section>
+
+        {/* Newsletter Section */}
+        <section className="container mx-auto px-4 py-12 md:py-20">
+          <div className="relative h-[300px] bg-gray-100">
+            <Image src="/placeholder.svg?height=300&width=1200" alt="Interior design" fill className="object-cover" />
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-20 text-white">
+              <h2 className="text-2xl md:text-3xl font-serif mb-6">Newsletter subscribe</h2>
+              <Button variant="outline" className="rounded-full px-6 py-2 border-white text-white text-xs">
                 Subscribe
-              </button>
-            </form>
+              </Button>
+            </div>
           </div>
         </section>
       </main>
 
-      <footer className="bg-gray-900 text-white py-12">
+      {/* Footer */}
+      <footer className="bg-[#f5f2ee] py-12">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">Earth Elements</h3>
-              <p>Your premier destination for luxury and modern interior design.</p>
+          <div className="flex flex-col md:flex-row justify-between mb-12">
+            <div className="mb-8 md:mb-0">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-6 h-6 bg-black"></div>
+                <span className="text-sm font-medium">Rawabi Interiors</span>
+              </div>
+              <div className="flex items-center gap-4 mt-4">
+                <Link href="#" className="text-sm">
+                  <Instagram className="h-4 w-4" />
+                </Link>
+                <Link href="#" className="text-sm">
+                  <Facebook className="h-4 w-4" />
+                </Link>
+                <Link href="#" className="text-sm">
+                  <Twitter className="h-4 w-4" />
+                </Link>
+              </div>
             </div>
-            {['Our Services', 'Our Projects', 'Resources'].map((title) => (
-              <div key={title}>
-                <h3 className="text-xl font-bold mb-4">{title}</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div>
+                <h3 className="text-sm font-medium mb-4">Projects</h3>
                 <ul className="space-y-2">
-                  <li><a href="#" className="hover:underline">Link 1</a></li>
-                  <li><a href="#" className="hover:underline">Link 2</a></li>
-                  <li><a href="#" className="hover:underline">Link 3</a></li>
-                  <li><a href="#" className="hover:underline">Link 4</a></li>
+                  <li>
+                    <Link href="#" className="text-xs hover:underline">
+                      Residential
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#" className="text-xs hover:underline">
+                      Commercial
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#" className="text-xs hover:underline">
+                      Retail
+                    </Link>
+                  </li>
                 </ul>
               </div>
-            ))}
+              <div>
+                <h3 className="text-sm font-medium mb-4">About us</h3>
+                <ul className="space-y-2">
+                  <li>
+                    <Link href="#" className="text-xs hover:underline">
+                      Our story
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#" className="text-xs hover:underline">
+                      Team
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-sm font-medium mb-4">Start project</h3>
+                <ul className="space-y-2">
+                  <li>
+                    <Link href="#" className="text-xs hover:underline">
+                      News
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#" className="text-xs hover:underline">
+                      Contact
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-sm font-medium mb-4">Email</h3>
+                <p className="text-xs">info@rawabiinteriors.com</p>
+                <p className="text-xs mt-4">UAE</p>
+              </div>
+            </div>
           </div>
-          <div className="mt-8 pt-8 border-t border-gray-800 text-center">
-            <p>&copy; 2023 Earth Elements. All rights reserved.</p>
+          <div className="border-t border-gray-200 pt-6 flex flex-col md:flex-row justify-between items-center">
+            <p className="text-xs mb-4 md:mb-0">© 2023 Copyright Rawabi Interiors</p>
+            <div className="flex gap-4">
+              <Link href="#" className="text-xs hover:underline">
+                Terms of service
+              </Link>
+              <Link href="#" className="text-xs hover:underline">
+                Privacy
+              </Link>
+            </div>
           </div>
         </div>
       </footer>
