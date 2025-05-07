@@ -48,7 +48,7 @@ export default function Home() {
       <main>
         {/* Hero Section */}
         <section className="container mx-auto px-4 py-12 md:py-20">
-          <h1 className="text-4xl md:text-6xl font-serif max-w-xl">Earth Elements and solutions</h1>
+          <h1 className="text-4xl md:text-6xl font-serif max-w-xl">Earth Elements and Solutions</h1>
           <div className="grid md:grid-cols-1 gap-8 mt-8">
             <div className="relative h-[400px] md:h-[500px] bg-gray-100">
               <Image
